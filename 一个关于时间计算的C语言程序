@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int t1,t2,t3,D1;
+    int h1,m1;
+    int h2,m2;
+    printf("输入起始时间    ");
+   scanf("%d,%d",&h1,&m1) ;
+    printf("输入终止时间    ");
+   scanf("%d,%d",&h2,&m2) ;
+   if(h1<24&&h2<24&&m1<60&&m2<60)
+   {
+       t1=(h2-h1)*60;
+   t2=m2-m1;
+   if(t1>0)
+   {t3=t1+t2;
+   printf("中间相差时间%d时%d分",t3/60,t3%60);}
+   else{
+        printf("间隔天数");
+    scanf("%d",&D1);
+    t1=(h2-h1)*60;
+    t1=(24*D1+h2-h1)*60;
+   t2=m2-m1;
+   t3=t1+t2;
+   printf("中间相差时间%d时%d分",t3/60,t3%60);}
+
+   }
+   else
+    printf("输入错误");
+
+    return 0;
+}
